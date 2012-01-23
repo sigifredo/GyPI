@@ -1,0 +1,36 @@
+<?php
+echo $this->doctype("HTML5");
+?>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <?php
+    echo $this->headMeta();
+    echo $this->headScript();
+    echo $this->headLink()->appendStylesheet($this->baseUrl().'/global.css');
+    echo $this->headLink(array('rel' => 'icon', 'href' => $this->baseUrl().'/img/favicon.png','type' => 'image/x-icon'));
+    $this->headTitle()->prepend('GyPI - ');
+    echo $this->headTitle();
+  ?>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/main.js"></script>
+  </head>
+  <body>
+    <header id="hdppal">Cabecera</header>
+    <div id="center">
+    <ul id="menu">
+      <li>Registro</li>
+      <li><a id="solicitudes" href="#">Solicitudes</a></li>
+      <ul id="lssolicitudes" class="submenu">
+        <li><a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>">Cambio de investigador</a></li>
+        <li>Prórroga</li>
+        <li>Responder solicitud</li>
+      </ul>
+      <li>Buscar</li>
+    </ul>
+    <div id="content"><?php echo $this->layout()->content; ?>
+    </div>
+    <div class="clear">clear</div></div>
+    <footer id="ftppal">Copyright © 2011 GfifDev S.A.S. Todos los derechos reservados.</footer>
+  </body>
+</html>

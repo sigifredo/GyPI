@@ -1,0 +1,40 @@
+header#hdppal, footer#ftppal, div#center
+{
+    margin: 0 auto;
+    width: 980px;
+    border: solid 1px blue;
+}
+div.clear
+{
+clear: both;
+}
+#menu, #content
+{
+border: solid 1px green;
+}
+#menu
+{
+margin: 0px;
+padding: 0px;
+width: 200px;
+float: left;
+}
+#menu ul
+{
+margin: 0;
+padding: 0;
+}
+#menu li
+{
+margin: 0px;
+padding: 5px 10px 5px 10px;
+list-style: none;
+}
+.submenu
+{
+display:none;
+}
+#content
+{
+float:left;
+}
