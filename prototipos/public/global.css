@@ -50,6 +50,7 @@ display:none;
 #content
 {
 float:left;
+width: 770px;
 }
 ul#menu li a
 {
@@ -59,4 +60,12 @@ ul#menu li a
 .respuesta
 {
 color: #507750;
+}
+table#responder
+{
+width: 90%;
+}
+table#responder, table#responder tr, table#responder th
+{
+border: solid 2px gray;
 }

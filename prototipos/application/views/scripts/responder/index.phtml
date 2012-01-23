@@ -1,17 +1,37 @@
 
-Solicitudes:<br>
 
-Cambio de investigador:<br>
-
-<table>
-<tr><td>Solicitud 1</td><td></td></tr>
-<tr><td>Solicitud 2</td><td></td></tr>
+<?php
+if(isset($_GET['proyecto']))
+{
+?>
+<br>
+Proyecto: <span class="respuesta"><?php echo $_GET['proyecto']; ?></span><br>
+<br>
+Pendientes:<br>
+<br>
+<table id="responder">
+<thead>
+<tr><th>Prórrogas</th><th>Cambio de investigador</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="<?php echo $this->url(array("controller" => "responder", "action" => "solicitud", "id" => "1231")); ?>">Solicitud 1231</a></td><td><a href="<?php echo $this->url(array("controller" => "responder", "action" => "solicitud", "id" => "42525")); ?>">Solicitud 42525</a></td></tr>
+</tbody>
 </table>
+<br>
 
-Prórroga:<br>
+<?php
+}
+else
+{
+?>
 
-<table>
-<tr><td>Solicitud 1</td><td></td></tr>
-<tr><td>Solicitud 2</td><td></td></tr>
-</table>
+<form method="get" action="<?php ?>">
 
+Proyecto <input name="proyecto" type="text" />
+
+<input type="submit" value="Buscar" />
+
+</form>
+<?php
+}
+?>

@@ -22,6 +22,11 @@
         </controllerFile>
         <controllerFile controllerName="Responder">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="solicitud"/>
+          <actionMethod actionName="guardar"/>
+        </controllerFile>
+        <controllerFile controllerName="Buscar">
+          <actionMethod actionName="index"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
@@ -54,6 +59,15 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Responder">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Responder">
+            <viewScriptFile forActionName="solicitud"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Responder">
+            <viewScriptFile forActionName="guardar"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

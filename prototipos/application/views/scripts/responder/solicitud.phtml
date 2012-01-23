@@ -1,0 +1,60 @@
+<?php
+
+if($this->id == 1231)
+{
+?>
+
+<br>
+Respuesta de la petición 1231:<br>
+<br>
+<form method="post" action="<?php echo $this->url(array("controller" => "responder", "action" => "guardar")); ?>">
+<input type="radio" /> Aceptado<br>
+<input type="radio" /> Rechazado<br>
+<br>
+<input type="file" /><br>
+<br>
+<input type="submit" value="Guardar" />
+<input type="reset" value="Restaurar" />
+</form>
+<br><br>
+Proyecto: <span class="respuesta">proyecto 1</span><br>
+<br>
+Nueva fecha: <span class="respuesta">2012-02-02</span><br>
+<br>
+Justificación:<br>
+<span class="respuesta">&ltJustificación de la  prórroga.&gt</span><br>
+<br>
+Archivo: <span class="respuesta">Ejemplo.txt</span><br>
+<?php
+}
+else if($this->id == 42525)
+{
+?>
+<br>
+Respuesta de la petición 42525:<br>
+<br>
+<form method="post" action="<?php echo $this->url(array("controller" => "responder", "action" => "guardar")); ?>">
+<input type="radio" /> Aceptado<br>
+<input type="radio" /> Rechazado<br>
+<br>
+<input type="file" /><br>
+<br>
+<input type="submit" value="Guardar" />
+<input type="reset" value="Restaurar" />
+</form>
+<br><br>
+Proyecto: <span class="respuesta">proyecto 1</span><br>
+<br>
+Responsable: <span class="respuesta">responsable</span><br>
+<br>
+Jutificación:<br>
+<span class="respuesta">&ltJustificación del cambio.&gt</span><br>
+<br>
+Perfil del nuevo investigador:<br>
+<span class="respuesta">&ltPerfil del nuevo investigador.&gt</span><br>
+<br>
+Archivo: <span class="respuesta">Ejemplo.txt</span><br>
+<?php
+}
+
+?>

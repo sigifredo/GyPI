@@ -10,12 +10,12 @@ class CinvestigadorController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $this->view->headTitle("Cambio de investigador");
     }
 
     public function guardarAction()
     {
-        // action body
+        $this->view->headTitle("Cambio de investigador");
     }
 
 
