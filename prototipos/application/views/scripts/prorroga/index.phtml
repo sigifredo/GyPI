@@ -1,16 +1,14 @@
-<h2>Cambio de investigador</h2>
 
-<form method="post" action="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "guardar"));  ?>">
+<h2>Prórroga</h2>
+
+<form method="post" action="<?php echo $this->url(array("controller" => "prorroga", "action" => "guardar"));  ?>">
 
 Proyecto: <input name="proyecto" type="text" /><br>
 <br>
-Responsable: <input name="responsable" type="text" /><br>
+Nueva fecha: <input name="fecha" type="date" /><br>
 <br>
 Justificación:<br>
 <textarea name="justificacion" rows="10" cols="50"></textarea><br>
-<br>
-Perfil del nuevo investigador:<br>
-<textarea name="perfil" rows="10" cols="50"></textarea><br>
 <br>
 Adjuntar archivo:<br>
 <input name="archivo" type="file" />

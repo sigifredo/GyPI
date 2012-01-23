@@ -1,6 +1,6 @@
 <?php
 
-class CinvestigadorController extends Zend_Controller_Action
+class ResponderController extends Zend_Controller_Action
 {
 
     public function init()
@@ -13,13 +13,6 @@ class CinvestigadorController extends Zend_Controller_Action
         // action body
     }
 
-    public function guardarAction()
-    {
-        // action body
-    }
-
 
 }
-
-
 

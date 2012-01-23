@@ -3,6 +3,8 @@ header#hdppal, footer#ftppal, div#center
     margin: 0 auto;
     width: 980px;
     border: solid 1px blue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 div.clear
 {
@@ -26,9 +28,20 @@ padding: 0;
 }
 #menu li
 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 margin: 0px;
 padding: 5px 10px 5px 10px;
 list-style: none;
+    background-color: #597959;
+}
+#lssolicitudes li
+{
+    background-color: #607D68;
+}
+ul#menu li:hover
+{
+    background-color: #688D68;
 }
 .submenu
 {
@@ -37,4 +50,13 @@ display:none;
 #content
 {
 float:left;
+}
+ul#menu li a
+{
+    text-decoration: none;
+    color: #383838;
+}
+.respuesta
+{
+color: #507750;
 }

@@ -16,21 +16,21 @@ echo $this->doctype("HTML5");
     <script src="<?php echo $this->baseUrl(); ?>/main.js"></script>
   </head>
   <body>
-    <header id="hdppal">Cabecera</header>
+    <header id="hdppal"><a href="<?php echo $this->url(array("controller" => "index", "action" => "index")); ?>">Cabecera</a></header>
     <div id="center">
     <ul id="menu">
       <li>Registro</li>
       <li><a id="solicitudes" href="#">Solicitudes</a></li>
       <ul id="lssolicitudes" class="submenu">
         <li><a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>">Cambio de investigador</a></li>
-        <li>Prórroga</li>
-        <li>Responder solicitud</li>
+        <li><a href="<?php echo $this->url(array("controller" => "prorroga", "action" => "index")); ?>">Prórroga</a></li>
+        <li><a href="<?php echo $this->url(array("controller" => "responder", "action" => "index")); ?>">Responder solicitud</a></li>
       </ul>
       <li>Buscar</li>
     </ul>
     <div id="content"><?php echo $this->layout()->content; ?>
     </div>
-    <div class="clear">clear</div></div>
+    <div class="clear"></div></div>
     <footer id="ftppal">Copyright © 2011 GfifDev S.A.S. Todos los derechos reservados.</footer>
   </body>
 </html>
