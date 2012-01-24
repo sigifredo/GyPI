@@ -18,19 +18,19 @@ echo $this->doctype("HTML5");
   <body>
     <header id="hdppal">GyPI</header>
     <div id="center">
-    <ul id="menu">
-      <li>Registro</li>
-      <li><a id="solicitudes" href="#">Solicitudes</a></li>
-      <ul id="lssolicitudes" class="submenu">
-        <li><a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>">- Cambio de investigador</a></li>
-        <li><a href="<?php echo $this->url(array("controller" => "prorroga", "action" => "index")); ?>">- Prórroga</a></li>
-        <li><a href="<?php echo $this->url(array("controller" => "responder", "action" => "index")); ?>">- Responder solicitud</a></li>
-      </ul>
-      <li><a href="<?php echo $this->url(array("controller" => "buscar", "action" => "index")); ?>">Buscar</a></li>
-    </ul>
+    <div id="menu">
+      <a id="inicio" href="<?php echo $this->url(array("controller" => "index", "action" => "index")); ?>">Inicio</a><br><br>
+      <a id="solicitudes" href="#">Solicitudes</a><br><br>
+      <div id="lssolicitudes" class="submenu">
+        <a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>"> - Cambio de investigador</a><br><br>
+        <a href="<?php echo $this->url(array("controller" => "prorroga", "action" => "index")); ?>"> - Prórroga</a><br><br>
+        <a href="<?php echo $this->url(array("controller" => "responder", "action" => "index")); ?>"> - Responder solicitud</a><br><br>
+      </div>
+      <a href="<?php echo $this->url(array("controller" => "buscar", "action" => "index")); ?>">Buscar</a><br><br>
+    </div>
     <div id="content"><?php echo $this->layout()->content; ?>
     </div>
     <div class="clear"></div></div>
-    <footer id="ftppal">Copyright © 2011 GfifDev S.A.S. Todos los derechos reservados.</footer>
+    <footer id="ftppal">GyPI - 2011/12</footer>
   </body>
 </html>
