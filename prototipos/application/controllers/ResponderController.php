@@ -10,23 +10,19 @@ class ResponderController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->headTitle("Prórroga");
+        $this->view->headTitle("Responder solicitud");
     }
 
     public function solicitudAction()
     {
+        $this->view->headTitle("Responder solicitud");
         $this->view->id = $this->_getParam('id', 0);
     }
 
     public function guardarAction()
     {
-        // action body
+        $this->view->headTitle("Responder solicitud");
     }
 
-
 }
-
-
-
-
 

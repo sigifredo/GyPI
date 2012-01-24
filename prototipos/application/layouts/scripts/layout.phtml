@@ -12,19 +12,19 @@ echo $this->doctype("HTML5");
     $this->headTitle()->prepend('GyPI - ');
     echo $this->headTitle();
   ?>
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/jquery-1.7.1.min.js"></script>
     <script src="<?php echo $this->baseUrl(); ?>/main.js"></script>
   </head>
   <body>
-    <header id="hdppal"><a href="<?php echo $this->url(array("controller" => "index", "action" => "index")); ?>">Cabecera</a></header>
+    <header id="hdppal">GyPI</header>
     <div id="center">
     <ul id="menu">
       <li>Registro</li>
       <li><a id="solicitudes" href="#">Solicitudes</a></li>
       <ul id="lssolicitudes" class="submenu">
-        <li><a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>">Cambio de investigador</a></li>
-        <li><a href="<?php echo $this->url(array("controller" => "prorroga", "action" => "index")); ?>">Prórroga</a></li>
-        <li><a href="<?php echo $this->url(array("controller" => "responder", "action" => "index")); ?>">Responder solicitud</a></li>
+        <li><a href="<?php echo $this->url(array("controller" => "cinvestigador", "action" => "index"));  ?>">- Cambio de investigador</a></li>
+        <li><a href="<?php echo $this->url(array("controller" => "prorroga", "action" => "index")); ?>">- Prórroga</a></li>
+        <li><a href="<?php echo $this->url(array("controller" => "responder", "action" => "index")); ?>">- Responder solicitud</a></li>
       </ul>
       <li><a href="<?php echo $this->url(array("controller" => "buscar", "action" => "index")); ?>">Buscar</a></li>
     </ul>

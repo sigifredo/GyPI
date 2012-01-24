@@ -1,0 +1,18 @@
+<?php
+if($this->id > 0)
+{
+?>
+<br>
+Nombre: <span class="respuesta">proyecto <?php echo $this->id; ?></span><br>
+<br>
+Justificación:<br>
+<span class="respuesta">Justificación del proyecto <?php echo $this->id; ?></span><br>
+<br>
+<a href="<?php echo $this->url(array("controller" => "buscar", "action" => "cronograma", "id" => $this->id)); ?>">Cronograma</a><br>
+<a href="<?php echo $this->url(array("controller" => "buscar", "action" => "compromisos", "id" => $this->id)); ?>">Compromisos</a><br>
+<a href="<?php echo $this->url(array("controller" => "buscar", "action" => "hprorrogas", "id" => $this->id)); ?>">Historial de prórrogas</a><br>
+<a href="<?php echo $this->url(array("controller" => "buscar", "action" => "integrante", "id" => $this->id)); ?>">Integrantes</a><br>
+<br>
+<?php
+}
+?>

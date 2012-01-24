@@ -2,40 +2,53 @@ header#hdppal, footer#ftppal, div#center
 {
     margin: 0 auto;
     width: 980px;
-    border: solid 1px blue;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+header#hdppal
+{
+    background-color: #f7f7f7;
+    color: #91BE3F;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+footer#ftppal
+{
+    text-align: center;
+    color: #606060;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    clear: left;
+}
 div.clear
 {
-clear: both;
-}
-#menu, #content
-{
-border: solid 1px green;
+    clear: both;
 }
 #menu
 {
-margin: 0px;
-padding: 0px;
-width: 200px;
-float: left;
+    background-color: #f7f7f7;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    float: left;
 }
 #menu ul
 {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 #menu li
 {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-margin: 0px;
-padding: 5px 10px 5px 10px;
-list-style: none;
+    margin: 0px;
+    padding: 5px 10px 5px 10px;
+    list-style: none;
     background-color: #597959;
 }
-#lssolicitudes li
+#lssolicitudes li, #lsbusquedas li
 {
     background-color: #607D68;
 }
@@ -45,12 +58,12 @@ ul#menu li:hover
 }
 .submenu
 {
-display:none;
+    display:none;
 }
 #content
 {
-float:left;
-width: 770px;
+    float:left;
+    width: 770px;
 }
 ul#menu li a
 {
@@ -59,13 +72,13 @@ ul#menu li a
 }
 .respuesta
 {
-color: #507750;
+    color: #507750;
 }
 table#responder
 {
-width: 90%;
+    width: 90%;
 }
 table#responder, table#responder tr, table#responder th
 {
-border: solid 2px gray;
+    border: solid 2px gray;
 }

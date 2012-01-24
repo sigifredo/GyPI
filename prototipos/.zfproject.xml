@@ -27,6 +27,12 @@
         </controllerFile>
         <controllerFile controllerName="Buscar">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="proyecto"/>
+          <actionMethod actionName="cronograma"/>
+          <actionMethod actionName="compromisos"/>
+          <actionMethod actionName="hprorrogas"/>
+          <actionMethod actionName="prorroga"/>
+          <actionMethod actionName="integrante"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
@@ -68,6 +74,24 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Responder">
             <viewScriptFile forActionName="guardar"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="proyecto"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="cronograma"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="compromisos"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="hprorrogas"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="prorroga"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Buscar">
+            <viewScriptFile forActionName="integrante"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

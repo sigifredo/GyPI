@@ -14,6 +14,41 @@ class BuscarController extends Zend_Controller_Action
         $this->view->headTitle("Buscar");
     }
 
+    public function proyectoAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
+
+    public function cronogramaAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
+
+    public function compromisosAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
+
+    public function hprorrogasAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
+
+    public function prorrogaAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
+
+    public function integranteAction()
+    {
+        $this->view->headTitle("Buscar");
+        $this->view->id = $this->_getParam('id', 0);
+    }
 
 }
 
