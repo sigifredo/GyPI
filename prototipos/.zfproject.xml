@@ -34,6 +34,10 @@
           <actionMethod actionName="prorroga"/>
           <actionMethod actionName="integrante"/>
         </controllerFile>
+        <controllerFile controllerName="RegProy">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="ingresarDatosBasicos"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory>
@@ -92,6 +96,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Buscar">
             <viewScriptFile forActionName="integrante"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="RegProy">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="RegProy">
+            <viewScriptFile forActionName="ingresarDatosBasicos"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
