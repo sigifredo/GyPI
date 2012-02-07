@@ -33,8 +33,6 @@ class RegProyController extends Zend_Controller_Action
     {
         if(!$this->getRequest()->isPost())
         {
-            echo "<h4 id='infnews'>Datos de noticia</h4>";
-            echo $form;
             return;
         }
 
@@ -44,8 +42,8 @@ class RegProyController extends Zend_Controller_Action
              ->setMethod('post');
 
         $values = $this->getRequest()->getParams();
-        $form->addElement('hidden','proyecto',array('label'=>'Proyecto: '.$values['nombre']));
-        $form->addElement('hidden','descripcion',array('label'=>'Descripción: '.$values['descripcion']));
+        $form->addElement('hidden','proyecto',array('label'=>'Proyecto: '.$values['nombre'], 'value' => $values['nombre']));
+        $form->addElement('hidden','descripcion',array('label'=>'Descripción: '.$values['descripcion'], 'value' => $values['descripcion']));
 
         // Integrante(s)
         $form->addElement('hidden','integrantes',array('label'=>'Integrantes'));
@@ -63,17 +61,37 @@ class RegProyController extends Zend_Controller_Action
 
     public function ingresarIntegrante($form)
     {
-        $form->addElement('text','nombre-integrante',array('label'=>'Nombre','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
+        $form->addElement('text','nombreintegrante',array('label'=>'Nombre','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
 
-        $form->addElement('text','documento-integrante',array('label'=>'Documento','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
+        $form->addElement('text','documentointegrante',array('label'=>'Documento','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
 
-        $form->addElement('text','correo-integrante',array('label'=>'Correo','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
+        $form->addElement('text','correointegrante',array('label'=>'Correo','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
     }
 
     public function ingresarCompromiso($form)
     {
-        $form->addElement('text','descripcion-compromiso',array('label'=>'Correo del integrante','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
-        $form->addElement('textarea','descripcion-compromiso',array('label'=>'Descripción del compromiso','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
+        $form->addElement('textarea','descripcioncompromiso',array('label'=>'Descripción del compromiso','required'=>true,'filter'=>'StringToLower','validator'=>'alfa','validator'=>'StringLength',false,array(4,25)));
+    }
+
+    public function guardarProyectoAction()
+    {
+        if(!$this->getRequest()->isPost())
+        {
+            return;
+        }
+
+        $values = $this->getRequest()->getParams();
+
+
+echo "<br>Se han guardado los datos correctamente:";
+echo "<br><br>Proyecto: ".$values['proyecto'];
+echo "<br>Descripción: ".$values['descripcion'];
+echo "<br><br>Integrantes";
+echo "<br>Nombre: ".$values['nombreintegrante'];
+echo "<br>Documento: ".$values['documentointegrante'];
+echo "<br>Correo: ".$values['correointegrante'];
+echo "<br><br>Comprimisos:";
+echo "<br>Descripción: ".$values['descripcioncompromiso'];
     }
 
 }
