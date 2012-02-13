@@ -8,7 +8,6 @@ echo $this->doctype("HTML5");
     echo $this->headMeta();
     echo $this->headScript();
     echo $this->headLink()->appendStylesheet($this->baseUrl().'/global.css');
-    echo $this->headLink(array('rel' => 'icon', 'href' => $this->baseUrl().'/img/favicon.png','type' => 'image/x-icon'));
     $this->headTitle()->prepend('GyPI - ');
     echo $this->headTitle();
   ?>

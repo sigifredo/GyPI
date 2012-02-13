@@ -42,6 +42,7 @@
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="CInvestigador"/>
+        <formFile formName="RegProy"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>

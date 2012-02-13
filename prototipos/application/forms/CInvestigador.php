@@ -6,7 +6,7 @@ class Application_Form_CInvestigador extends Zend_Form
     public function init()
     {
         $this->setName('frmCInvestigador')
-            ->setAttrib('class', 'frmClass');
+             ->setAttrib('class', 'frmClass');
 
         // Agregamos los elementos
         $this->addElement('text', 'proyecto', array('label' => 'Proyecto:'));
