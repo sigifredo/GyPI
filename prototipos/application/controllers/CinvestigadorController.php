@@ -11,6 +11,10 @@ class CinvestigadorController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->view->headTitle("Cambio de investigador");
+
+        $form = new Application_Form_CInvestigador();
+
+        echo $form;
     }
 
     public function guardarAction()
@@ -20,6 +24,4 @@ class CinvestigadorController extends Zend_Controller_Action
 
 
 }
-
-
 
