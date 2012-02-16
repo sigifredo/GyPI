@@ -12,7 +12,12 @@ class RegProyController extends Zend_Controller_Action
     {
         $this->view->headTitle("Registro de proyecto");
 
-        $form = new Application_Form_RegProy();
+        $form = new Application_Form_Registro();
+        $form->proyecto();
+
+        $p = new Proyecto();
+        $p->agregarParticipante("");
+
         echo $form;
     }
 
