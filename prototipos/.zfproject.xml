@@ -36,7 +36,6 @@
         </controllerFile>
         <controllerFile controllerName="RegProy">
           <actionMethod actionName="index"/>
-          <actionMethod actionName="ingresarDatosBasicos"/>
           <actionMethod actionName="guardarProyecto"/>
         </controllerFile>
       </controllersDirectory>
@@ -103,9 +102,6 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="RegProy">
             <viewScriptFile forActionName="index"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="RegProy">
-            <viewScriptFile forActionName="ingresarDatosBasicos"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="RegProy">
             <viewScriptFile forActionName="guardarProyecto"/>

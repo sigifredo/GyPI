@@ -3,7 +3,7 @@
 class Extern_MaresFacade
 {
 
-    public static function validarUsuario()
+    public static function validarUsuario($sDocumento)
     {
         $vinculos = array(
                              1 => "Estudiante",

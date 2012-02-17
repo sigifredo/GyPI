@@ -20,15 +20,29 @@ class Proyecto
         $this->_aCompromisos = array();
     }
 
+    public function nombre()
+    {
+        return $this->_sNombre;
+    }
+
+    public function descripcion()
+    {
+        return $this->_sDescripcion;
+    }
+
+    public function participantes()
+    {
+        return $this->_aParticipantes;
+    }
 
     public function agregarParticipante($participante)
     {
-        if(gettype($participante) == gettype(Participante))
-        {
+        // if(gettype($participante) == gettype(Participante))
+        // {
             $this->_aParticipantes[] = $participante;
-        }
-        else
-            throw new Exception("Parámetro invalido");
+        // }
+        // else
+        //     throw new Exception("Parámetro invalido");
     }
 
     public function agregarCompromiso($compromiso)
