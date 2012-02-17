@@ -15,9 +15,6 @@ class RegProyController extends Zend_Controller_Action
         $form = new Application_Form_Registro();
         $form->proyecto();
 
-        $p = new Proyecto();
-        $p->agregarParticipante("");
-
         echo $form;
     }
 
