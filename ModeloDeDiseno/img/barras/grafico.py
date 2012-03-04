@@ -18,7 +18,7 @@ rects1 = ax.bar(ind, menMeans, width, color='g', yerr=menStd)
 ax.set_ylabel('Porcentaje')
 ax.set_title('Defectos encontrados')
 ax.set_xticks(ind+width)
-ax.set_xticklabels( ('Modelo de negocio', 'Modelo de requisitos', 'Modelo de diseno', 'Imlementacion') )
+ax.set_xticklabels( ('Modelo de negocio', 'Modelo de requisitos', "Modelo de diseno", "Imlementacion") )
 
 def autolabel(rects):
     # attach some text labels
