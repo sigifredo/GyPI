@@ -39,10 +39,11 @@ El sistema permite registrar proyectos de investigación ya aprobados previament
 \section{Vista de casos de uso}
 \maketitle El sistema GyPI  ofrece los siguientes casos de uso:
 
+% imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img1.bmp}
-  \caption{Plan de trabajo propuesto}
+    \includegraphics[width=0.80\textwidth]{./img/img1.png}
+  \caption{Casos de uso}
 \end{figure}
 
 \maketitle A continuación se presentan cada uno de los casos de uso de manera mas detallada:
@@ -50,36 +51,53 @@ El sistema permite registrar proyectos de investigación ya aprobados previament
 \textbf{CU-CS-Consultas:}
 El sistema debe permitir realizar todo tipo de consultas sobre los grupos de investigación y sus respectivos proyectos. La información brindada en la consulta sera catalogada según el rol del usuario que la consulta de acuerdo con la regla de negocio RN-010 Acceso a la Información.
 
+% imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img2.bmp}
-  \caption{Plan de trabajo propuesto}
+    \includegraphics[width=0.80\textwidth]{./img/img2.png}
+  \caption{Casos de uso d consultas}
 \end{figure}
 
 \textbf{CU-CI-Cambio de Investigador:}
 El sistema debe permitir el registro de las solicitudes de cambio de investigador de un determinado proyecto. La solicitud para el cambio debe estar diligenciada de acuerdo a la regla de negocio RN-008 Cambio de Investigador.
 
+% imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img3.bmp}
-  \caption{Plan de trabajo propuesto}
+    \includegraphics[width=0.80\textwidth]{./img/img3.png}
+  \caption{Casos de uso de cambio de investigador}
 \end{figure}
 
 \textbf{CU-RP-Registro Proyecto:}
 EL sistema debe permitir registrar un proyecto de investigación  de acuerdo con la regla de negocio RN-001 Registro de proyecto y sus respectivos componentes como lo son descripción (RN-003 Descripción de proyecto), investigador principal y responsable de proyecto  (RN-002 Investigador principal y responsable de proyecto), compromisos (RN-004 Compromisos), cronograma (RN-005 Cronograma), integrantes (RN-009 Validar usuario) e historial de prórrogas.
 
 % imagen
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img4.png}
+  \caption{Casos de uso de registro de proyecto}
+\end{figure}
 
 \textbf{CU-PR-Prórrogas}
 El sistema debe permitir almacenar una solicitud de prórroga realizada por un grupo de investigación de acuerdo con las reglas de negocio  RN-006 prórrogas y RN-007 Solicitud de prórroga.
 
 % imagen
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img5.png}
+  \caption{Casos de uso de prórrogas}
+\end{figure}
 
 \textbf{CU-CP-Compromisos}
 
 El sistema debe permitir realizar seguimiento a los compromisos de cada proyecto de investigación para tramitar y validar el cumplimiento o no de los mismos.
 
 %imagen
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img6.png}
+  \caption{Casos de uso de compromisos}
+\end{figure}
 
 \textbf{Requisitos de calidad}\\
 \\
@@ -103,41 +121,34 @@ El sistema debe permitir realizar seguimiento a los compromisos de cada proyecto
 \subsection{Diagrama de clases}
 
 % imagen
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img7.png}
+  \caption{Diagrama de clases}
+\end{figure}
 
-\textbf{Catalogo de elementos}\\
-\\
-\textbf{Integrante:} se implementa una clase Integrante desarrollada en PHP la cual nos permite definir un integrante de un grupo de investigación.\\
-\\
-\textbf{FacadeConexionMares:} clase que implementa el patrón facade la cual nos representa el sistema Mares de la Universidad de Antioquia permitiendo así mediante esta obtener el vinculo que un integrante a registrar en un proyecto de investigación posee con la Universidad.\\
-\\
-\maketitle \textbf{Proyecto:} se implementa una claseProyecto desarrollada en PHP que que representa un proyecto de investigación almacenado en el sistema.\\
-\\
-\textbf{Compromiso:} clase que define un compromiso vinculado a un proyecto.\\
-\\
-\textbf{prórroga:} clase desarrollada en PHP que representa una prórroga solicitada en un proyecto.\\
-\\
-\textbf{Cronograma:} clase desarrollada en PHP que define el cronograma estipulado para la culminación de un proyecto.\\
-\\
-\textbf{CtrlProyecto:} implementamos el patrón controller mediante la clase ctrlProyecto para que este se encargue de comunicarse con la interfaz que nos permite realizar operaciones sobre los proyectos registrados y este a su vez mediante sus métodos asigna a la clase proyecto la responsabilidad de ejecutar las acciones solicitadas por el usuario mediante la interfaz.\\
-\\
-\textbf{\textit{enumeration} Cargo:} clase que nos permite definir conjuntos de constantes enteras, llamados datos de tipo enumerado. Las variables declaradas de este tipo sólo podrán tomar valores dentro del dominio definido en la declaración en nuestro caso los cargos que puede tomar un integrante de un proyecto.\\
-\\
-\textbf{\textit{enumeration} Estado:} clase que implementa el estándar <<enumeration>> que nos permite seleccionar los estados que puede tener un proyecto de investigación.\\
-\\
-\textbf{Fecha:} clase que representa la fecha de inicio y final de algunas de las actividades del sistema que requieran de estas.\\
-\\
-\textbf{CambioInvestigadorDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un cambio de investigador.\\
-\\
-\textbf{CompromisoDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un compromiso\\
-\\
-\textbf{CronogramaDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un cronograma.\\
-\\
-\textbf{ProyectoDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un proyecto.\\
-\\
-\textbf{ProrrogaDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a una prorroga.\\
-\\
-\textbf{Zend\_Db\_Table\_Abstract:} clase que hace parte del framework (Zend) e implementa todos los métodos necesarios para hacer llamados y operaciones en la base de datos. Esta clase implementa el patrón singleton para tener una sola conexión a la base de datos y no consumir recursos estableciendo una conexión cada vez que se necesite interactuar con esta.\\
-\\
+
+\item \textbf{Catalogo de elementos}\\
+
+\begin{itemize}
+ \item \textbf{Integrante:} se implementa una clase Integrante desarrollada en PHP la cual nos permite definir un integrante de un grupo de investigación.
+ \item \textbf{FacadeConexionMares:} clase que implementa el patrón facade la cual nos representa el sistema Mares de la Universidad de Antioquia permitiendo así mediante esta obtener el vinculo que un integrante a registrar en un proyecto de investigación posee con la Universidad.
+ \item \textbf{Proyecto:} se implementa una claseProyecto desarrollada en PHP que que representa un proyecto de investigación almacenado en el sistema.
+ \item \textbf{Compromiso:} clase que define un compromiso vinculado a un proyecto.
+ \item \textbf{prórroga:} clase desarrollada en PHP que representa una prórroga solicitada en un proyecto.
+ \item \textbf{Cronograma:} clase desarrollada en PHP que define el cronograma estipulado para la culminación de un proyecto.
+ \item \textbf{CtrlProyecto:} implementamos el patrón controller mediante la clase ctrlProyecto para que este se encargue de comunicarse con la interfaz que nos permite realizar operaciones sobre los proyectos registrados y este a su vez mediante sus métodos asigna a la clase proyecto la responsabilidad de ejecutar las acciones solicitadas por el usuario mediante la interfaz.
+ \item \textbf{\textit{enumeration} Cargo:} clase que nos permite definir conjuntos de constantes enteras, llamados datos de tipo enumerado. Las variables declaradas de este tipo sólo podrán tomar valores dentro del dominio definido en la declaración en nuestro caso los cargos que puede tomar un integrante de un proyecto.
+ \item \textbf{\textit{enumeration} Estado:} clase que implementa el estándar <<enumeration>> que nos permite seleccionar los estados que puede tener un proyecto de investigación.
+ \item \textbf{Fecha:} clase que representa la fecha de inicio y final de algunas de las actividades del sistema que requieran de estas.
+ \item \textbf{CambioInvestigadorDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un cambio de investigador.
+ \item \textbf{CompromisoDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un compromiso.
+ \item \textbf{CronogramaDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un cronograma.
+ \item \textbf{ProyectoDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a un proyecto.
+ \item \textbf{ProrrogaDB:} clase que permite acceder a la base de datos para las operaciones pertinentes a una prorroga.
+ \item \textbf{Zend\_Db\_Table\_Abstract:} clase que hace parte del framework (Zend) e implementa todos los métodos necesarios para hacer llamados y operaciones en la base de datos. Esta clase implementa el patrón singleton para tener una sola conexión a la base de datos y no consumir recursos estableciendo una conexión cada vez que se necesite interactuar con esta.
+\end{itemize}
+
 
 \textbf{Variabilidad:}
 Mediante el archivo application.ini del framework ZEND se pueden cambiar los parámetros de conexión a la base de datos del sistema.\\
@@ -159,33 +170,30 @@ El patrón facade se utiliza para proporcionar una interfaz unificada que nos pe
 \subsection{Diagrama Entidad - Relación}
 
 % imagen
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img8.png}
+  \caption{Diagrama entidad relación}
+\end{figure}
+
 
 \textbf{Catalogo de elementos}\\
-\\
-\textbf{tb\_integrante:} Esta tabla contiene los integrantes registrados en cada uno de los proyectos almacenados en el sistema.\\
-\\
-\textbf{tb\_cargo:} Esta tabla contiene los cargos que puede tener un integrante.\\
-\\
-\textbf{tb\_integrante\_proyecto:} Esta tabla relaciona cada integrante con su respectivo proyecto.\\
-\\
-\textbf{tb\_proyecto:} Esta tabla contiene los proyectos registrados en el sistema identificados cada uno por un numero único de registro.\\
-\\
-\textbf{tb\_compromiso:} Esta tabla contiene cada uno de los compromisos que tiene un proyecto.\\
-\\
-\textbf{tb\_estado\_compromiso:} Esta tabla contiene los estados que puede tener un compromiso.\\
-\\
-\textbf{tb\_tipo solicitud:} Esta tabla contiene los tipos de solicitud que se pueden realizar en el sistema.\\
-\\
-\textbf{tb\_cambio\_investigador:} Esta tabla contiene las solicitudes de cambio de investigador.\\
-\\
-\textbf{tb\_estado\_solicitud:} Esta tabla contiene los estados que puede tener una solicitud.\\
-\\
-\textbf{tb\_solicitud:} Esta tabla contiene las distintas solicitudes (cambio de investigador, prórroga)realizadas por el usuario y que han sido registradas en el sistema.\\
-\\
-\textbf{tb\_cronograma:} Esta tabla contiene los distintos cronogramas pertenecientes a cada uno de los proyectos registrados en el sistema.\\
-\\
 
-\textbf{Razón del diseño}
+\begin{itemize}
+ \item \textbf{tb\_integrante:} Esta tabla contiene los integrantes registrados en cada uno de los proyectos almacenados en el sistema.
+ \item \textbf{tb\_cargo:} Esta tabla contiene los cargos que puede tener un integrante.
+ \item \textbf{tb\_integrante\_proyecto:} Esta tabla relaciona cada integrante con su respectivo proyecto.
+ \item \textbf{tb\_proyecto:} Esta tabla contiene los proyectos registrados en el sistema identificados cada uno por un numero único de registro.
+ \item \textbf{tb\_compromiso:} Esta tabla contiene cada uno de los compromisos que tiene un proyecto.
+ \item \textbf{tb\_estado\_compromiso:} Esta tabla contiene los estados que puede tener un compromiso.
+ \item \textbf{tb\_tipo solicitud:} Esta tabla contiene los tipos de solicitud que se pueden realizar en el sistema.
+ \item \textbf{tb\_cambio\_investigador:} Esta tabla contiene las solicitudes de cambio de investigador.
+ \item \textbf{tb\_estado\_solicitud:} Esta tabla contiene los estados que puede tener una solicitud.
+ \item \textbf{tb\_solicitud:} Esta tabla contiene las distintas solicitudes (cambio de investigador, prórroga)realizadas por el usuario y que han sido registradas en el sistema.
+ \item \textbf{tb\_cronograma:} Esta tabla contiene los distintos cronogramas pertenecientes a cada uno de los proyectos registrados en el sistema.
+\end{itemize}
+
+\textbf{Razón del diseño:}
 El modelo de entidad - relación nos muestra las entidades relevantes para nuestro sistema así como sus  interrelaciones y propiedades.\\
 \\
 
@@ -199,25 +207,26 @@ El modelo de entidad - relación nos muestra las entidades relevantes para nuest
 \subsection{Diagrama de componentes}
 
 % imagen diagrama de componentes
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img9.png}
+  \caption{Diagrama de componentes}
+\end{figure}
+
 
 \textbf{Catalogo de elementos}\\
-\\
-\textbf{Navegador:} Este componente representa el navegador web del cliente para acceder a nuestro sistema. Este componente requiere de ciertos parámetros para su funcionamiento por lo cual se recomienda que se utilicen los navegadores mas comunes como lo son el chrome, firefox ,internet explorer, opera y zafari.\\
-\\
-\textbf{Controlador de interfaz:} En el componente controlador de interfaz va a estar el código javascrip que permiten controlar y validar los parámetros ingresados por el usuario a través de la pagina web del sistema logrando así que la información que se envíe al mismo sea una información correcta y procesable.\\
-\\
-\textbf{Interfaz gráfica:} En el componente Interfaz gráfica van a estar las pantallas o interfaces que van a interactuar con el usuario. Como va a ser una aplicación web este componente contiene los archivos HTML y PHP encargados de proporcionar las distintas interfaces gráficas.\\
-\\
-\textbf{Estilos gráficos:} Este componente contiene los archivos CSS que configuran la apariencia gráfica de las interfaces del sistema.\\
-\\
-\textbf{Aplicación GyPI:} Este componente representa el sistema de administración de proyectos de investigación. Es el encargado de gestionar la información de cada uno de los proyectos registrados en el sistema.\\
-\\
-\textbf{Framework ZEND:} componente que representa el framework ZEND el cual es un completo entorno de desarrollo integrado para el lenguaje de programación PHP.\\
-\\
-\textbf{MySQL:} Este componente se utiliza para realizar la gestión de la base de datos del sistema.\\
-\\
-\textbf{Bases de datos:} Este componente representa la base de datos del sistema.\\
-\\
+
+
+\begin{itemize}
+ \item \textbf{Navegador:} Este componente representa el navegador web del cliente para acceder a nuestro sistema. Este componente requiere de ciertos parámetros para su funcionamiento por lo cual se recomienda que se utilicen los navegadores mas comunes como lo son el chrome, firefox ,internet explorer, opera y zafari.
+ \item \textbf{Controlador de interfaz:} En el componente controlador de interfaz va a estar el código javascrip que permiten controlar y validar los parámetros ingresados por el usuario a través de la pagina web del sistema logrando así que la información que se envíe al mismo sea una información correcta y procesable.
+ \item \textbf{Interfaz gráfica:} En el componente Interfaz gráfica van a estar las pantallas o interfaces que van a interactuar con el usuario. Como va a ser una aplicación web este componente contiene los archivos HTML y PHP encargados de proporcionar las distintas interfaces gráficas.
+ \item \textbf{Estilos gráficos:} Este componente contiene los archivos CSS que configuran la apariencia gráfica de las interfaces del sistema.
+ \item \textbf{Aplicación GyPI:} Este componente representa el sistema de administración de proyectos de investigación. Es el encargado de gestionar la información de cada uno de los proyectos registrados en el sistema.
+ \item \textbf{Framework ZEND:} componente que representa el framework ZEND el cual es un completo entorno de desarrollo integrado para el lenguaje de programación PHP.
+ \item \textbf{MySQL:} Este componente se utiliza para realizar la gestión de la base de datos del sistema.
+ \item \textbf{Bases de datos:} Este componente representa la base de datos del sistema.
+\end{itemize}
 
 \textbf{Variabilidad:}
 Los componentes de estilos gráficos pueden ser remplazados por otros componentes que provean una mejor vista estética en caso de ser necesaria.\\
@@ -237,42 +246,37 @@ El framewok ZEND fue escogido ya que permite la organización del los archivos d
 \subsection{Diagrama de paquetes}
 
 % imagen diagrama de paquetes
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img10.png}
+  \caption{Diagrama de paquetes}
+\end{figure}
+
 
 \textbf{Catalogo de elementos}\\
-\\
-\textbf{Principal\_vista:} Este modulo representa la interfaz que el sistema proporciona para la comunicación con el usuario. Contiene los archivos HTML,  javascript y CSS con los cuales se desarrolla la interfaz principal del sistema.\\
-\\
-\textbf{prórroga\_vista:} En este modulo representa la interfaz gráfica correspondiente a las prórrogas.Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz pertinente a las prórrogas.\\
-\\
-\textbf{Registro de Proyecto\_vista:} En este modulo representa la interfaz gráfica para registrar un proyecto de investigación en el sistema. Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz con la que el usuario interactúa con el sistema para el registro de un proyecto de investigación.\\
-\\
-\textbf{Cambio de investigador\_vista:} En este modulo representa la interfaz gráfica correspondiente a la solicitud de un cambio de investigador. Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz para solicitar un cambio de investigador y para dar respuesta a las solicitudes pendientes.\\
-\\
-\textbf{Consulta\_vista:} Este modulo  representa la interfaz gráfica utilizada para realizar las búsquedas en el sistema.Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz que permite al usuario realizar una búsqueda en el sistema.\\
-\\
-\textbf{prórroga\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con las prórrogas. Este modulo contiene las clases PHP que se relacionan con las prórrogas y las clases controladoras del las mismas.\\
-\\
-\textbf{Registro de Proyecto\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con el proceso de registro de un proyecto. Este modulo contiene las clases PHP que se relacionan con los proyectos y las clases controladoras del los mismos.\\
-\\
-\textbf{Cambio de investigador\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con el proceso de solicitud y respuesta a un cambio de investigador. En este modulo se encuentran las clases PHP relacionadas con un cambio de investigador y su respectivo controlador.\\
-\\
-\textbf{Consulta\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con la búsqueda de información en el sistema. Contiene las clases PHP que permiten realizar una búsqueda en el sistema.\\
-\\
-\textbf{Conexión:} Este modulo contiene los archivos de conexión a la base de datos del sistema. En este modulo están contenidos los archivos del framework utilizado los cuales nos permiten establecer los parámetros de conexión y configuraron a la base de datos del sistema.\\
-\\
-\textbf{IO:} contiene los archivos que utiliza el sistema para el ingreso y consulta los datos en la base de datos.\\
-\\
-\textbf{Mares:} Este modulo representa el sistema Mares de la Universidad de Antioquia. Este modulo contiene las clases que permiten la conexión entre el sistema GyPI y Mares necesaria para obtener el vinculo de los integrantes de un proyecto con la Universidad de Antioquia.\\
-\\
+
+\begin{itemize}
+ \item \textbf{Principal\_vista:} Este modulo representa la interfaz que el sistema proporciona para la comunicación con el usuario. Contiene los archivos HTML,  javascript y CSS con los cuales se desarrolla la interfaz principal del sistema.
+ \item \textbf{prórroga\_vista:} En este modulo representa la interfaz gráfica correspondiente a las prórrogas.Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz pertinente a las prórrogas.
+ \item \textbf{Registro de Proyecto\_vista:} En este modulo representa la interfaz gráfica para registrar un proyecto de investigación en el sistema. Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz con la que el usuario interactúa con el sistema para el registro de un proyecto de investigación.
+ \item \textbf{Cambio de investigador\_vista:} En este modulo representa la interfaz gráfica correspondiente a la solicitud de un cambio de investigador. Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz para solicitar un cambio de investigador y para dar respuesta a las solicitudes pendientes.
+ \item \textbf{Consulta\_vista:} Este modulo  representa la interfaz gráfica utilizada para realizar las búsquedas en el sistema.Contiene los archivos HTML, javascript y CSS con los que se desarrolla la interfaz que permite al usuario realizar una búsqueda en el sistema.
+ \item \textbf{prórroga\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con las prórrogas. Este modulo contiene las clases PHP que se relacionan con las prórrogas y las clases controladoras del las mismas.
+ \item \textbf{Registro de Proyecto\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con el proceso de registro de un proyecto. Este modulo contiene las clases PHP que se relacionan con los proyectos y las clases controladoras del los mismos.
+ \item \textbf{Cambio de investigador\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con el proceso de solicitud y respuesta a un cambio de investigador. En este modulo se encuentran las clases PHP relacionadas con un cambio de investigador y su respectivo controlador.
+ \item \textbf{Consulta\_dominio:} En este modulo se lleva a cabo la lógica del sistema relacionada con la búsqueda de información en el sistema. Contiene las clases PHP que permiten realizar una búsqueda en el sistema.
+ \item \textbf{Conexión:} Este modulo contiene los archivos de conexión a la base de datos del sistema. En este modulo están contenidos los archivos del framework utilizado los cuales nos permiten establecer los parámetros de conexión y configuraron a la base de datos del sistema.
+ \item \textbf{IO:} contiene los archivos que utiliza el sistema para el ingreso y consulta los datos en la base de datos.
+ \item \textbf{Mares:} Este modulo representa el sistema Mares de la Universidad de Antioquia. Este modulo contiene las clases que permiten la conexión entre el sistema GyPI y Mares necesaria para obtener el vinculo de los integrantes de un proyecto con la Universidad de Antioquia.
+\end{itemize}
 
 \textbf{Razón del diseño:}
 Utilizamos este diagrama para visualizar de manera clara el patrón de arquitectura de software utilizado, en nuestro caso el Modelo Vista Controlador.\\
-\\
 
 \textbf{Vistas relacionadas}
 \begin{itemize}
-\item Vista de implementación --- Diagrama de componentes
-\item Vista de diseño --- Diagrama de clases
+ \item Vista de implementación --- Diagrama de componentes
+ \item Vista de diseño --- Diagrama de clases
 \end{itemize}
 
 
@@ -284,45 +288,35 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Registrar Proyecto}
 
 % Imagen diagrama de actividades
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img11.png}
+  \caption{Registrar proyecto}
+\end{figure}
+
 
 \textbf{Catalogo de elementos}\\
-\\
-\textbf{solicitar registro proyecto:} El usuario Administrativo solicita registrar un proyecto en el sistema.\\
-\\
-\textbf{solicitar integrantes proyecto:} El sistema solicita que se ingresen los integrantes del proyecto.\\
-\\
-\textbf{solicitar datos de proyecto:} El sistema solicita que se ingresen los datos del proyecto.\\
-\\
-\textbf{ingresar datos de proyecto:} El usuario ingresa los datos del proyecto.\\
-\\
-\textbf{ingresar integrantes de proyecto:} El usuario ingresa los integrantes del proyecto.\\
-\\
-\textbf{solicitar vinculo integrante:} El sistema solicita el vinculo del integrante a través de la plataforma Mares de la Universidad de Antioquia.\\
-\\
-\textbf{retornar vinculo integrante:} El sistema Mares retorna el vinculo del integrante.\\
-\\
-\textbf{validar vinculo integrante:} El sistema valida que el integrante tenga algún tipo de vinculo con la universidad.\\
-\\
-\textbf{solicitar compromiso:} El sistema solicita los compromisos para el proyecto que esta siendo registrado.\\
-\\
-\textbf{solicitar cronograma:} El sistema solicita el cronograma para el proyecto que esta siendo registrado.\\
-\\
-\textbf{crear historial de prórrogas:} El sistema crea un nuevo historial de prórrogas vacío para el proyecto que esta siendo registrado.\\
-\\
-\textbf{ingresar compromisos:} El usuario ingresa el o los compromisos para este proyecto.\\
-\\
-\textbf{ingresar cronograma:} EL usuario ingresa el cronograma para este proyecto.\\
-\\
-\textbf{asignar numero compromiso:} El sistema asigna un numero único a cada uno de los compromisos ingresados.\\
-\\
-\textbf{asignar numero cronograma:} El sistema asigna un numero único al cronograma registrado.\\
-\\
-\textbf{solicitar guardar proyecto:} El usuario solicita guardar el proyecto.\\
-\\
-\textbf{asignar numero proyecto:} El sistema asigna un numero único al proyecto.\\
-\\
-\textbf{guardar proyecto:} El sistema guarda el proyecto que ha sido registrado.\\
-\\
+
+\begin{itemize}
+ \item \textbf{solicitar registro proyecto:} El usuario Administrativo solicita registrar un proyecto en el sistema.
+ \item \textbf{solicitar integrantes proyecto:} El sistema solicita que se ingresen los integrantes del proyecto.
+ \item \textbf{solicitar datos de proyecto:} El sistema solicita que se ingresen los datos del proyecto.
+ \item \textbf{ingresar datos de proyecto:} El usuario ingresa los datos del proyecto.
+ \item \textbf{ingresar integrantes de proyecto:} El usuario ingresa los integrantes del proyecto.
+ \item \textbf{solicitar vinculo integrante:} El sistema solicita el vinculo del integrante a través de la plataforma Mares de la Universidad de Antioquia.
+ \item \textbf{retornar vinculo integrante:} El sistema Mares retorna el vinculo del integrante.
+ \item \textbf{validar vinculo integrante:} El sistema valida que el integrante tenga algún tipo de vinculo con la universidad.
+ \item \textbf{solicitar compromiso:} El sistema solicita los compromisos para el proyecto que esta siendo registrado.
+ \item \textbf{solicitar cronograma:} El sistema solicita el cronograma para el proyecto que esta siendo registrado.
+ \item \textbf{crear historial de prórrogas:} El sistema crea un nuevo historial de prórrogas vacío para el proyecto que esta siendo registrado.
+ \item \textbf{ingresar compromisos:} El usuario ingresa el o los compromisos para este proyecto.
+ \item \textbf{ingresar cronograma:} EL usuario ingresa el cronograma para este proyecto.
+ \item \textbf{asignar numero compromiso:} El sistema asigna un numero único a cada uno de los compromisos ingresados.
+ \item \textbf{asignar numero cronograma:} El sistema asigna un numero único al cronograma registrado.
+ \item \textbf{solicitar guardar proyecto:} El usuario solicita guardar el proyecto.
+ \item \textbf{asignar numero proyecto:} El sistema asigna un numero único al proyecto.
+ \item \textbf{guardar proyecto:} El sistema guarda el proyecto que ha sido registrado.
+\end{itemize}
 
 \textbf{Vistas relacionadas}
 \begin{itemize}
@@ -333,6 +327,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Responder solicitud de prórroga}
 
 % Imagen diagrama de actividades
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.80\textwidth]{./img/img12.png}
+  \caption{Responder solicitud de prórroga}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 \begin{itemize}
