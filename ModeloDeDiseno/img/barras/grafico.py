@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 N = 4
-menMeans = (100, 50, 10, 0)
+menMeans = (100, 20, 10, 0)
 menStd =   (0, 0, 0, 0)
 
 ind = np.arange(N)  # the x locations for the groups
@@ -18,7 +18,7 @@ rects1 = ax.bar(ind, menMeans, width, color='g', yerr=menStd)
 ax.set_ylabel('Porcentaje')
 ax.set_title('Defectos encontrados')
 ax.set_xticks(ind+width)
-ax.set_xticklabels( ('Modelo de negocio', 'Modelo de requisitos', "Modelo de diseno", "Implementacion") )
+ax.set_xticklabels( ('Modelo del sistema', 'Modelo de requisitos', "Modelo de diseno", "Implementacion") )
 
 def autolabel(rects):
     # attach some text labels
