@@ -8,12 +8,15 @@
 \usepackage{graphicx}
 
 \title{Modelo de diseño}
-\author{Sigifredo Escobar Gómez}
+\author{
+Alejandro Palacio Duque\\
+Sigifredo Escobar Gómez
+}
 \date{}
 
 \pdfinfo{%
   /Title    (Modelo de diseño)
-  /Author   ()
+  /Author   (Sigifredo Escobar Gómez)
   /Creator  ()
   /Producer ()
   /Subject  ()
@@ -21,11 +24,11 @@
 }
 
 \begin{document}
-\maketitle Modelo de diseño
+
+\maketitle
 
 \tableofcontents	% Tabla de contenido
-% \listoffigures		% Índice de figuras
-% \listiftables		% Índice de tablas
+\listoffigures		% Índice de figuras
 
 \newpage
 
@@ -42,7 +45,7 @@ El sistema permite registrar proyectos de investigación ya aprobados previament
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img1.png}
+    \includegraphics[width=0.75\textwidth]{./img/img1.png}
   \caption{Casos de uso}
 \end{figure}
 
@@ -54,8 +57,8 @@ El sistema debe permitir realizar todo tipo de consultas sobre los grupos de inv
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img2.png}
-  \caption{Casos de uso d consultas}
+    \includegraphics[width=0.75\textwidth]{./img/img2.png}
+  \caption{Casos de uso de consultas}
 \end{figure}
 
 \textbf{CU-CI-Cambio de Investigador:}
@@ -64,7 +67,7 @@ El sistema debe permitir el registro de las solicitudes de cambio de investigado
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img3.png}
+    \includegraphics[width=0.75\textwidth]{./img/img3.png}
   \caption{Casos de uso de cambio de investigador}
 \end{figure}
 
@@ -74,7 +77,7 @@ EL sistema debe permitir registrar un proyecto de investigación  de acuerdo con
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img4.png}
+    \includegraphics[width=0.75\textwidth]{./img/img4.png}
   \caption{Casos de uso de registro de proyecto}
 \end{figure}
 
@@ -84,7 +87,7 @@ El sistema debe permitir almacenar una solicitud de prórroga realizada por un g
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img5.png}
+    \includegraphics[width=0.75\textwidth]{./img/img5.png}
   \caption{Casos de uso de prórrogas}
 \end{figure}
 
@@ -95,7 +98,7 @@ El sistema debe permitir realizar seguimiento a los compromisos de cada proyecto
 %imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img6.png}
+    \includegraphics[width=0.75\textwidth]{./img/img6.png}
   \caption{Casos de uso de compromisos}
 \end{figure}
 
@@ -123,12 +126,12 @@ El sistema debe permitir realizar seguimiento a los compromisos de cada proyecto
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img7.png}
+    \includegraphics[width=0.75\textwidth]{./img/img7.png}
   \caption{Diagrama de clases}
 \end{figure}
 
 
-\item \textbf{Catalogo de elementos}\\
+\textbf{Catalogo de elementos}\\
 
 \begin{itemize}
  \item \textbf{Integrante:} se implementa una clase Integrante desarrollada en PHP la cual nos permite definir un integrante de un grupo de investigación.
@@ -172,7 +175,7 @@ El patrón facade se utiliza para proporcionar una interfaz unificada que nos pe
 % imagen
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img8.png}
+    \includegraphics[width=0.75\textwidth]{./img/img8.png}
   \caption{Diagrama entidad relación}
 \end{figure}
 
@@ -209,7 +212,7 @@ El modelo de entidad - relación nos muestra las entidades relevantes para nuest
 % imagen diagrama de componentes
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img9.png}
+    \includegraphics[width=0.75\textwidth]{./img/img9.png}
   \caption{Diagrama de componentes}
 \end{figure}
 
@@ -248,7 +251,7 @@ El framewok ZEND fue escogido ya que permite la organización del los archivos d
 % imagen diagrama de paquetes
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img10.png}
+    \includegraphics[width=0.75\textwidth]{./img/img10.png}
   \caption{Diagrama de paquetes}
 \end{figure}
 
@@ -290,8 +293,8 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 % Imagen diagrama de actividades
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img11.png}
-  \caption{Registrar proyecto}
+    \includegraphics[width=0.75\textwidth]{./img/img11.png}
+  \caption{Diagrama de actividades - Registrar proyecto}
 \end{figure}
 
 
@@ -329,8 +332,8 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 % Imagen diagrama de actividades
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/img12.png}
-  \caption{Responder solicitud de prórroga}
+    \includegraphics[width=0.75\textwidth]{./img/img12.png}
+  \caption{Diagrama de actividades - Responder solicitud de prórroga}
 \end{figure}
 
 \textbf{Catalogo de elementos}
@@ -353,9 +356,14 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \end{itemize}
 
 
-\subsubsection{solicitud de prórroga}
+\subsubsection{Solicitud de prórroga}
 
 % Imagen diagrama de actividades
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img13.png}
+  \caption{Diagrama de actividades - solicitud de prórroga}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -383,6 +391,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Tramitar compromiso}
 
 % Imagen diagrama de actividades
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img14.png}
+  \caption{Diagrama de actividades - Tramitar compromiso}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -416,6 +429,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Registrar solicitud de prórroga}
 
 % imagen diagrama de secuencias
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img15.png}
+  \caption{Diagrama de secuencias - Registrar solicitud de prórroga}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -434,6 +452,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Registro de proyecto}
 
 % imagen diagrama de secuencias
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img16.png}
+  \caption{Diagrama de secuencias - Registro de proyecto}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -455,6 +478,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Solicitar cambio de investigador}
 
 % imagen diagrama de secuencias
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img17.png}
+  \caption{Diagrama de secuencias - Solicitar cambio de investigador}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -474,6 +502,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Validar compromiso}
 
 % imagen diagrama de secuencias
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img18.png}
+  \caption{Diagrama de secuencias - Validar compromiso}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 \begin{itemize}
@@ -494,6 +527,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Cambio de investigador}
 
 % imagen diagrama de estados
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img19.png}
+  \caption{Diagrama de estados - Cambio de investigador}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -517,6 +555,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Solicitud prórroga}
 
 % imagen diagrama de estados
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img20.png}
+  \caption{Diagrama de estados - Solicitud prórroga}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -537,6 +580,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Compromiso}
 
 % imagen diagrama de estados
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img21.png}
+  \caption{Diagrama de estados - Compromiso}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 \begin{itemize}
@@ -562,6 +610,11 @@ Utilizamos este diagrama para visualizar de manera clara el patrón de arquitect
 \subsubsection{Diagrama de despliegue}
 
 % imagen diagrama de despliegue
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img22.png}
+  \caption{Vista de despliegue}
+\end{figure}
 
 \textbf{Catalogo de elementos}
 
@@ -587,6 +640,11 @@ El sistema GyPI debe contar con un servidor de muy buen desempeño y de respuest
 \subsubsection{Diagrama de secuencia sistema GyPI – Mares}
 
 % imagen diagrama de secuencia 
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{./img/img23.png}
+  \caption{Diagrama de secuencia sistema GyPI – Mares}
+\end{figure}
 
 La interacción entre el sistema GyPI y Mares de la Universidad de Antioquia se da para obtener el vinculo que un posible integrante de un proyecto de investigación tiene con la Universidad.
 
@@ -623,40 +681,78 @@ La interacción entre el sistema GyPI y Mares de la Universidad de Antioquia se 
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/cal1.png}
+    \includegraphics[width=0.75\textwidth]{./img/cal1.png}
   \caption{Plan de trabajo propuesto}
 \end{figure}
  
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.80\textwidth]{./img/cal2.png}
+      \includegraphics[width=0.75\textwidth]{./img/cal2.png}
   \caption{Plan de trabajo ejecutado}
 \end{figure}
 
-\maketitle En las figuras 1 y 2 podemos observar el plan propuesto al inicio del proyecto con el ejecutado. El desvío se devió a la situación que en ese momento ocurrida en la Universdad de Antioquia. Por esta razón el cliente pidió parar el desarrollo normal del proyecto hasta que se normalizara la situación y los estudiantes, profesores y grupos de investigación regresaran a su normal funcionamiento.
+\maketitle En las figuras 3.1 y 3.2 podemos observar el plan propuesto al inicio del proyecto con el ejecutado. El desvío se devió a la situación que en ese momento ocurrida en la Universdad de Antioquia. Por esta razón el cliente pidió parar el desarrollo normal del proyecto hasta que se normalizara la situación y los estudiantes, profesores y grupos de investigación regresaran a su normal funcionamiento.
 
 \subsubsection{Gráfica de valor ganado de proyecto}
 
-\begin{center}
-\begin{tabular}{| c | c | c | c |}
-\hline
-Tarea & Recurso humano & Recurso técnico & Total \\
-\hline
+Acontinuacion realizamos una tabla que nos permite visualizar la realcion del presupuesto planteada en
+el modelo del nogocio a traves del tiempo estimado de desarrollo de la aplicacion.
 
-\hline
-\end{tabular}
-\end{center}
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen1.png}
+  \caption{Presupuesto}
+\end{figure}
+
+La siguiente tabla muestra el porcentaje de avance del proyecto a lo largo del tiempo establecido para el desarrollo del mismo.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen2.png}
+  \caption{Control de avance}
+\end{figure}
+
+Se obtiene mediante el calculo del producto entre el porcentaje de avance y el costo presupuestado
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen3.png}
+  \caption{Valor ganado}
+\end{figure}
+
+La siguiente tabla muestra el costo real de la aplicacion dado que la Universidad de Antioquia estubo cerrada por al rededor de 2 meses lo cual incurre en sobrecostos para el desarrollo del proyecto.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen4.png}
+  \caption{Costo real}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen5.png}
+  \caption{Tabla de presupuesto}
+\end{figure}
+
+La siguiente grafica muestra el presupuesto pactado en el modelo del negocio contra el costo real para el desarrollo de la aplicacion
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.75\textwidth]{./img/imagen6.png}
+  \caption{Gráfica de valor ganado}
+\end{figure}
+
 
 \section{Soporte}
-\subsection{Indicadores de soporte}
+
 \subsection{Número de defectos de diseño hallados en verificación y validación}
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.80\textwidth]{./img/barras/barras.png}
+    \includegraphics[width=0.75\textwidth]{./img/barras/barras.png}
   \caption{Defectos encontrados}
 \end{figure}
 
-\maketitle Como podemos ver en a figura 3, los errores encontrados en el modelo del sistema fueron de un 100\%, ya que luego de esta entrega, el sistema fue dividido en dos por su complegidad. El primer módulo se orientó en la parte administrativa, la cual es la que trabajamos en este documento, y el segundo módulo, se orientó a la parte presupiestal. En el modelo de requisitos y de diseño encontramos un 20\% y 10\% respectivamente, devido a problemas de comunicación con el cliente y el equipo de desarrollo. La implementación cuenta con 0\% de problemas ya que esta etapa está por comenzar.
+\maketitle Como podemos ver en a figura 3.9, los errores encontrados en el modelo del sistema fueron de un 100\%, ya que luego de esta entrega, el sistema fue dividido en dos por su complegidad. El primer módulo se orientó en la parte administrativa, la cual es la que trabajamos en este documento, y el segundo módulo, se orientó a la parte presupiestal. En el modelo de requisitos y de diseño encontramos un 20\% y 10\% respectivamente, devido a problemas de comunicación con el cliente y el equipo de desarrollo. La implementación cuenta con 0\% de problemas ya que esta etapa está por comenzar.
 
 \end{document}
