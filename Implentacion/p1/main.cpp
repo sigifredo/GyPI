@@ -17,14 +17,14 @@ int main()
 
     lista l;
 
-    std::cin >> n;
+    cin >> n;
 
     // Leemos los n datos.
     for(int i = 0; i < n; i++)
     {
         int iNro;
 
-        std::cin >> iNro;
+        cin >> iNro;
         l.push_back(iNro);
 
         // A medida que leemos calculamos la sumatoria de todos los datos.
