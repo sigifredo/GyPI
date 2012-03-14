@@ -5,9 +5,6 @@
 // Own
 #include<Regresion.hpp>
 
-#include<iostream>
-using namespace std;
-
 Regresion::Regresion(lista &lx, lista &ly)
 {
     float xm, ym;
